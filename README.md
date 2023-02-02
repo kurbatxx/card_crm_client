@@ -8,9 +8,12 @@ cargo add flutter_rust_bridge
 # flutter
 
 ```
-flutter pub add ffi
-flutter pub add --dev ffigen
-flutter pub add flutter_rust_bridge
+flutter pub add ffi -d ffigen flutter_rust_bridge -d build_runner -d freezed freezed_annotation
+```
+
+# for non arch add variable
+```
+export CPATH="$(clang -v 2>&1 | grep "Selected GCC installation" | rev | cut -d' ' -f1 | rev)/include"
 ```
 
 # buiid
