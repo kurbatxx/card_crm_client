@@ -2,3 +2,8 @@
 /Cargo.lock
 
 *generated*
+
+crm_client/android/app/src/main/jniLibs/arm64-v8a/libcard_crm_client.so
+crm_client/android/app/src/main/jniLibs/armeabi-v7a/libcard_crm_client.so
+crm_client/android/app/src/main/jniLibs/x86/libcard_crm_client.so
+crm_client/android/app/src/main/jniLibs/x86_64/libcard_crm_client.so
