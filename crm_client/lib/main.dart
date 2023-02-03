@@ -1,4 +1,5 @@
 import 'package:crm_client/native.dart';
+import 'package:crm_client/rust/bridge_generated.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,12 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: FutureBuilder(
-            future: api.helloWorld(),
+            future: api.login(
+              accessData: AccessData(
+                login: "login",
+                password: "password",
+              ),
+            ),
             builder: (context, data) {
               if (data.hasData) {
                 return Text(data.data ?? "ERROR");

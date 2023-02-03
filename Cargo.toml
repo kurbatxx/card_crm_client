@@ -8,6 +8,14 @@ edition = "2021"
 [dependencies]
 #flutter_rust_bridge = "1.62.0"
 flutter_rust_bridge = "=1.61.1"
+once_cell = "1.17.0"
+
+reqwest = { version = "0.11.14", features = [
+    "blocking",
+    "native-tls",
+    "cookies",
+] }
+
 
 [lib]
 crate-type = ["lib", "cdylib", "staticlib"]
