@@ -1,4 +1,5 @@
 use once_cell::sync::Lazy;
+use reqwest::tls;
 //use reqwest::blocking::Client;
 use std::collections::HashMap;
 
@@ -14,6 +15,7 @@ static CLIENT_INSTANCE: Lazy<reqwest::blocking::Client> = Lazy::new(|| {
     println!("INIT_CLIENT");
     reqwest::blocking::Client::builder()
         .use_native_tls()
+        .max_tls_version(tls::Version::TLS_1_1)
         .cookie_store(true)
         .danger_accept_invalid_certs(true)
         .build()
